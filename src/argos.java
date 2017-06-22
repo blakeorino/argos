@@ -24,16 +24,16 @@ public class argos {
         frame.setVisible(true);
         */
 
-
+/*
         System.out.println("Hello World");
-        creature carrot = new creature();
+        Creature carrot = new Creature();
         System.out.println(carrot.get_name());
-        creature less_carrot = new creature();
+        Creature less_carrot = new Creature();
 
         carrot.set_name("Bobby doLittle");
         System.out.println(carrot.get_name());
         System.out.println(less_carrot.get_name());
-
+*/
         while (true) {
             console_parse();
         }
@@ -42,13 +42,16 @@ public class argos {
         Scanner scanner = new Scanner(System.in);
         String input = scanner.next();
         System.out.println(input);
-        if ( input.equals("display") || input.equals("d")) {
+        if ( input.equals("display") || input.equals("f")) {
             for ( int i = 1; i >= -1; i-- ) {
                 System.out.println(WORLD.build_line( 3, i ));
             }
         }
         else if ( input.equals("exit") ) {
             System.exit(0);
+        }
+        else if ( input.equals("b") ) {
+            WORLD.battle();
         }
         else {
             //this is the mapping to the logical commands in the map

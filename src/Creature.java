@@ -1,12 +1,12 @@
 /**
  * Created by blake on 8/22/16.
  */
-public class creature {
+public class Creature {
     private stats stat = new stats();
     private String name = "";
     private String kind = "";
 
-    public creature() {
+    public Creature() {
         name = "Johnny";
         this.stat.health   = 5;
         this.stat.healthpoints = this.stat.health;
