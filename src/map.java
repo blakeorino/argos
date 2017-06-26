@@ -9,7 +9,9 @@ public class map {
     private class Location {
         public String type = "";
         public Object occupied = null;
-        public Location() {}
+        public Location() {
+            this.type = "default";
+        }
         public Location(String name) { this.type = name; }
         public Location(Location old) {
             type = old.type;
@@ -44,8 +46,12 @@ public class map {
         }
         grid_one[start_number][start_number] = new Location(home);
 
-        Creature c_test = new Creature();
-        grid_one[start_number][start_number+1].occupied = c_test;
+        Creature c_test00 = new Creature();
+        Creature c_test01 = new Creature();
+        c_test01.set_name("John Cena");
+        c_test01.level_up();
+        grid_one[start_number][start_number+1].occupied = c_test00;
+        grid_one[start_number][start_number-1].occupied = c_test01;
     }
 
     //Need up update to include information for the occupied type.
@@ -99,7 +105,7 @@ public class map {
         if( o != null) {
             if( o instanceof Creature) {
                 Creature carrot = (Creature) o;
-                System.out.println(carrot.get_name());
+                System.out.println(carrot.get_name()+" D: "+carrot.get_defence());
             }
         }
         else { System.out.println("Noooope!");

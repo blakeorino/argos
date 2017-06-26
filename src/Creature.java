@@ -36,4 +36,11 @@ public class Creature {
         if ( this.stat.healthpoints == 0 ) { this.stat.healthpoints = 0; }
     }
     public void reset() {this.stat.healthpoints = this.stat.health; }
+
+    public void level_up() {
+        this.stat.defense++;
+    }
+    public int get_defence() {
+        return this.stat.defense;
+    }
 }
