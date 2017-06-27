@@ -21,7 +21,7 @@ public class map {
     private Location[][] grid_one;
     private int x,y, x_bounds, y_bounds;
 
-    //constructor class for building a map.  Only builds a square map
+    //cons tructor class for building a map.  Only builds a square map
     //with water as the boundaries ATM.
     public map( int one ) {
         x_bounds = one;
