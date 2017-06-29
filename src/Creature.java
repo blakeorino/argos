@@ -16,6 +16,17 @@ public class Creature {
         this.stat.strength = 1;
 
     }
+
+    //copy type constructor
+    public Creature(Creature old_c) {
+        this.name = old_c.name;
+        this.stat.health = old_c.stat.health;
+        this.stat.attack = old_c.stat.attack;
+        this.stat.defense = old_c.stat.defense;
+        this.stat.intel = old_c.stat.intel;
+        this.stat.strength = old_c.stat.strength;
+        this.reset();
+    }
     public void set_name(String input) { name = input; }
     public String get_name() {
         String toReturn;
@@ -37,6 +48,7 @@ public class Creature {
     }
     public void reset() {this.stat.healthpoints = this.stat.health; }
 
+    //This will be correct, and updated later.  Used currently for a sanity check.
     public void level_up() {
         this.stat.defense++;
     }

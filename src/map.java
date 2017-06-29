@@ -46,6 +46,8 @@ public class map {
         }
         grid_one[start_number][start_number] = new Location(home);
 
+        //below if for debug.  Will be removed and moved into the 'debug templates
+        // for building the maps
         Creature c_test00 = new Creature();
         Creature c_test01 = new Creature();
         c_test01.set_name("John Cena");
@@ -100,6 +102,10 @@ public class map {
         } else { System.out.println("Error upading y Location"); }
     }
 
+    /**
+     * --Have not figured out how this will work in yet, currently in place to be able to
+     * verify that implementation of where creatures are being stored at the map are correct
+     */
     public void battle(){
         Object o = grid_one[x][y].occupied;
         if( o != null) {
@@ -107,8 +113,7 @@ public class map {
                 Creature carrot = (Creature) o;
                 System.out.println(carrot.get_name()+" D: "+carrot.get_defence());
             }
-        }
-        else { System.out.println("Noooope!");
+        } else { System.out.println("Noooope!");
         }
     }
     /**
